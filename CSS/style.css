@@ -1,0 +1,235 @@
+/* FONTS USED */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+/* COLOR AND FONT VARS */
+:root {
+    --light-leela: #EBEBFB;
+    --greyist-leela: #8F8FA6;
+    --light-greyist-leela: #DDDDF2;
+    --very-dark-purple: #2E2E58;
+    --dark-pink: #E33454;
+    --white: #FFFFFF;
+
+    --main-font: 'Merriweather', serif;
+    --secondary-font: 'Poppins', sans-serif;
+
+}
+
+
+/* GENERAL STYLE */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--light-leela);
+}
+
+/* MAIN STYLE */
+main {
+    position: relative;
+    /* margin: 0 auto; */
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: var(--white);
+    width: 496px;
+    height: 713px;
+    border-radius: 20px;
+    /* z-index: 1; */
+    padding: 60px 60px 60px 100px;
+    
+}
+.container .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.section-header .main-title {
+    font-size: 24px;
+    font-family: var(--main-font);
+    color: var(--very-dark-purple);
+
+}
+
+.section-header .close-icon {
+    font-size: 32px;
+}
+
+.main-text {
+    font-family: var(--secondary-font);
+    font-size: 17px;
+    color: var(--very-dark-purple);
+    padding: 10px 78px 20px 0;
+    line-height: 25px;
+}
+
+.cancel-question {
+    font-family: var(--secondary-font);
+    font-size: 16px;
+    color: var(--very-dark-purple);
+    padding: 10px 0 10px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form > div {
+    font-family: var(--secondary-font);
+    font-size: 16px;
+    color:var(--very-dark-purple);
+    padding: 5px 0;
+}
+
+.input-cost-container {
+    display: block;
+    position: relative;
+    padding-left: 32px;
+    margin-bottom: 1px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.input-cost-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.input-cost-container .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid #2E2E58;
+}
+
+.input-cost-container:hover input ~ .checkmark {
+    background-color: #8F8FA6;
+}
+
+.input-cost-container input:checked ~ .checkmark {
+    background-color: white;
+}
+
+.input-cost-container .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.input-cost-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.input-cost-container .checkmark:after {
+    left: 8px;
+    top: 5px;
+    width: 6px;
+    height: 10px;
+    border: solid #2E2E58;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.cancel-proof {
+    padding: 20px 0;
+}
+
+.cancel-proof .typing-CANCEL {
+    font-family: var(--secondary-font);
+    font-size: 15px;
+    color: var(--very-dark-purple);
+    margin-bottom: 7px;
+    font-weight: 500;
+}
+
+.cancel-proof input {
+    width: 300px;
+    height: 40px;
+    padding-left: 10px;
+    font-family: var(--secondary-font);
+    font-size: 15px;
+    border: 2px solid var(--very-dark-purple);
+    border-radius: 4px;
+    
+}
+.cancel-proof input:focus {
+    background-color: var(--light-leela);
+}
+
+
+.container .last-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .last-sec .submit-button {
+    width: 300px;
+    height: 40px;
+    margin-top: 8px;
+    background-color: var(--dark-pink);
+    color: var(--white);
+    font-family: var(--secondary-font);
+    font-size: 15px;
+    font-weight: 300;
+    border: 1px solid var(--dark-pink);
+    border-radius: 4px;
+    margin-right: 36px;
+
+
+}
+
+.container .last-sec a {
+    text-decoration: none;
+    font-family: var(--secondary-font);
+    margin-right: 36px;
+    padding-top: 20px;
+    color: var(--greyist-leela);
+
+}
+
+
+
+
+
+
+
+.back-box { 
+    content: "";
+    background-color: var(--light-greyist-leela);
+    width: 496px;
+    height: 713px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-65%, -59%);
+    border-radius: 20px;
+    z-index: -1;
+   
+
+}
+
