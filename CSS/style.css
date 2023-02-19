@@ -14,7 +14,6 @@
 
     --main-font: 'Merriweather', serif;
     --secondary-font: 'Poppins', sans-serif;
-
 }
 
 
@@ -23,19 +22,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* border: 1px solid red; */
 }
 
 body {
     background-color: var(--light-leela);
+    
 }
 
 /* MAIN STYLE */
 main {
     position: relative;
-    /* margin: 0 auto; */
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-
 }
 
 .container {
@@ -48,9 +47,8 @@ main {
     width: 496px;
     height: 713px;
     border-radius: 20px;
-    /* z-index: 1; */
     padding: 60px 60px 60px 100px;
-    
+    margin-top: 50px;
 }
 .container .section-header {
     display: flex;
@@ -62,11 +60,13 @@ main {
     font-size: 24px;
     font-family: var(--main-font);
     color: var(--very-dark-purple);
-
 }
 
 .section-header .close-icon {
     font-size: 32px;
+}
+.section-header .close-icon:hover {
+    cursor: pointer;
 }
 
 .main-text {
@@ -119,17 +119,17 @@ form > div {
     left: 0;
     height: 25px;
     width: 25px;
-    background-color: white;
+    background-color: var(--white);
     border-radius: 5px;
     border: 2px solid #2E2E58;
 }
 
 .input-cost-container:hover input ~ .checkmark {
-    background-color: #8F8FA6;
+    background-color: var(--light-greyist-leela);
 }
 
 .input-cost-container input:checked ~ .checkmark {
-    background-color: white;
+    background-color: var(--white);
 }
 
 .input-cost-container .checkmark:after {
@@ -147,7 +147,7 @@ form > div {
     top: 5px;
     width: 6px;
     height: 10px;
-    border: solid #2E2E58;
+    border: solid var(--very-dark-purple);
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -174,12 +174,11 @@ form > div {
     font-size: 15px;
     border: 2px solid var(--very-dark-purple);
     border-radius: 4px;
-    
 }
+
 .cancel-proof input:focus {
     background-color: var(--light-leela);
 }
-
 
 .container .last-sec {
     display: flex;
@@ -199,8 +198,10 @@ form > div {
     border: 1px solid var(--dark-pink);
     border-radius: 4px;
     margin-right: 36px;
+}
 
-
+.container .last-sec .submit-button:hover {
+    cursor: pointer;
 }
 
 .container .last-sec a {
@@ -209,14 +210,7 @@ form > div {
     margin-right: 36px;
     padding-top: 20px;
     color: var(--greyist-leela);
-
 }
-
-
-
-
-
-
 
 .back-box { 
     content: "";
@@ -229,7 +223,5 @@ form > div {
     transform: translate(-65%, -59%);
     border-radius: 20px;
     z-index: -1;
-   
-
+    margin-top: 50px;
 }
-
